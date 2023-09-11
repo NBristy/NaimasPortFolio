@@ -1,0 +1,46 @@
+<h1 mat-dialog-title>
+  <small><i class="fas fa-chart-line"></i> Detection Graph </small>
+</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-12">
+      <div id='overlay' class="overlay" *ngIf="scope.wait">
+        <i class="fas fa-spinner fa-spin"></i>
+      </div>
+      <div class="chart-box">
+        <div>
+          <apx-chart #chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [stroke]="chartOptions.stroke"
+            [colors]="chartOptions.colors"
+            [dataLabels]="chartOptions.dataLabels"
+            [legend]="chartOptions.legend"
+            [grid]="chartOptions.grid"
+            [yaxis]="chartOptions.yaxis"
+            [title]="chartOptions.title"
+            [markers]="chartOptions.markers"
+            [tooltip]="chartOptions.tooltip"
+          ></apx-chart>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions class="mt-20">
+  <div class="button-set text-right">
+    <button *ngIf="scope.wait" disabled class="border btn btn-dark btn-xs" (click)="downloadCSV()" type="button" tabindex="-1">
+      <i class="fas fa-download"></i> CSVダウンロード
+    </button>
+    <button *ngIf="!scope.wait" class="border btn btn-dark btn-xs" (click)="downloadCSV()" type="button" tabindex="-1">
+      <i class="fas fa-download"></i> CSVダウンロード
+    </button>
+    <button class="border btn btn-default btn-xs" type="button" [mat-dialog-close]="false" tabindex="-1">
+      Close
+    </button>
+  </div>
+</div>
+

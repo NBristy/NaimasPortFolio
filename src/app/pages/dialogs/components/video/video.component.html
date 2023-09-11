@@ -1,0 +1,98 @@
+<div mat-dialog-title>
+  <div fxLayout="row" class="video-title">
+    <div class="icon-text-container"><mat-icon class="icon">theaters</mat-icon>Video Component</div>
+    <button mat-mini-fab color="accent" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>
+<div mat-dialog-content>
+  <mat-grid-list cols="4" rowHeight="450px">
+    <mat-grid-tile colspan="3" rowspan="1">
+      <mat-card>
+        <mat-card-content>
+          <div class="video-bg">
+            <div class="video" *ngIf="videoUrl">
+              <video #videoPlayer muted controls class="videoWid" (timeupdate)="onTimeUpdate()">
+                <source [src]="videoUrl" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          
+          <div class="timeline-box">
+            <div class="timeline-container" #timelineContainer>
+              <div class="timeline" [style.width.%]="timelineLength">
+                <div class="scale-line" *ngFor="let timestamp of timelineTimestamps" [style.left.%]="calculateMarkerPosition(timestamp)"></div>
+                <!-- <div class="timeline-progress" [style.width]="scope.progressWidth + '%'"> -->
+                  <button class="marker" *ngFor="let markerTime of markerTimes" 
+                    [style.left.%]="calculateMarkerPosition(markerTime)"
+                    (click)="seekToTime(markerTime)">
+                    <mat-icon color="primary">bookmark</mat-icon>
+                    <!-- <i class="fas fa-bookmark" style='font-size:24px; color:purple'></i> -->
+                  </button>
+                <!-- </div> -->
+                <div class="timestamp-markers">
+                  <div class="timestamp-marker" *ngFor="let timestamp of timelineTimestamps" [style.left.%]="calculateMarkerPosition(timestamp)" style="width: 100px;" [attr.data-seconds]="timestamp">
+                    {{ formatTime(timestamp) }}
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <div class="text-box">
+        <div class="mb">作業日：　{{ scope.start_date }}</div>
+        <div class="mb">作業者：　{{ scope.user_name }}</div>
+        <div class="mb">動画URL：　{{ videoUrl }}</div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <section class="table-container mat-elevation-z8" tabindex="0">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+      <!-- start_datetime Column -->
+      <ng-container matColumnDef="start_datetime">
+        <th mat-header-cell *matHeaderCellDef> Start Time </th>
+        <td mat-cell *matCellDef="let element">
+          <a mat-flat-button (click)="goToMark(element.start_datetime)">
+            {{ element.start_datetime }}
+          </a>
+        </td>
+      </ng-container>
+
+      <!-- end_datetime Column -->
+      <ng-container matColumnDef="end_datetime">
+        <th mat-header-cell *matHeaderCellDef> End Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.end_datetime}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </section>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onClose()">閉じる</button>
+</div>

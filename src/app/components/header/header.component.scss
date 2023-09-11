@@ -1,0 +1,101 @@
+// .example-spacer {
+//   flex: 1 1 auto;
+// }
+
+.main-header {
+  z-index: 1;
+}
+.fa-bars {
+  cursor: pointer;
+}
+
+.main-header .navbar-nav .nav-item {
+  margin-right: 20px;
+  .nav-link {
+    cursor: pointer;
+  }
+}
+.d-none {
+  min-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navbar-nav>.user-menu>.dropdown-menu {
+  width: 190px;
+
+}
+@media screen and (max-width:480px) {
+  .navbar-nav>.user-menu>.dropdown-menu {
+    width: 190px;
+    left: -120px;
+  }
+}
+
+.user-menu {
+  // width: 275px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .dropdown-item {
+    width: 190px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  a {
+    color: #666;
+  }
+  .user-image {
+    float: left;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  .mode {
+    margin-left: 10px;
+  }
+}
+
+.navbar-badge {
+  font-size: .6rem;
+  font-weight: 300;
+  padding: 2px 4px;
+  position: absolute;
+  right: 3px;
+  top: 5px;
+}
+.dropdown-menu-bell {
+  width: 450px;
+  .subject {
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .note {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 75%;
+  }
+
+}
+.fa-info {
+  color: #17a2b8;
+}
+.fa-exclamation-triangle {
+  color: #ffc107;
+}
+
+.fa-ban {
+  color: #721c24;
+}
+.noRead {
+  background-color: #e9ecef;
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,27 @@
+.main-sidebar {
+  overflow: auto;
+  z-index: 500;
+  a {
+    cursor: pointer;
+  }
+  .nav-sidebar  {
+  }
+}
+#sidebar-overlay {
+  z-index: 499;
+
+}
+.logo-img {
+  margin-top: 8px;
+}
+.brand-text {
+  font-size: 80%;
+  .small {
+    font-size: 60%;
+  }
+}
+@media screen and (max-width:480px) {
+  .elevation-4 {
+    box-shadow: none;
+  }
+}

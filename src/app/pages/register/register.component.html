@@ -1,0 +1,49 @@
+<div class="video-background">
+  <video autoplay loop muted>
+    <source src="assets/videos/bg.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="v-content">
+    <div class="card-div">
+      <mat-card class="login-card">
+        <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register()">
+          <mat-card-title class="item-center">REGISTER</mat-card-title>
+          <mat-card-subtitle class="item-center">Create your account. Its free and only takes a minute.</mat-card-subtitle>
+          <mat-card-content class="content">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Full Name</mat-label>
+              <input type="text" matInput formControlName="name" >
+              <mat-error *ngIf="invalidRequired('name')">Please enter your <strong>full name</strong></mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput formControlName="email" >
+              <mat-error *ngIf="invalidRequired('email')">Please enter your <strong>email address</strong></mat-error>
+              <mat-error *ngIf="invalidPattern('email')">Please enter a valid email address</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput formControlName="password">
+              <mat-error *ngIf="invalidRequired('password')">Please enter your <strong>password</strong></mat-error>
+              <mat-error *ngIf="invalidPattern('password')">
+                Password must be at least 8 characters long with a mixture of one uppercase letter, one lowercase letter, one number and a special character
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Confirm Password</mat-label>
+              <input type="password" matInput formControlName="confirmPassword">
+              <mat-error *ngIf="invalidRequired('confirmPassword')">Please re-type your <strong>password</strong></mat-error>
+              <mat-error *ngIf="invalidPattern('confirmPassword')">
+                Password must be at least 8 characters long with a mixture of one uppercase letter, one lowercase letter, one number and a special character
+              </mat-error>
+            </mat-form-field>
+            <mat-spinner [style.display]="scope.showSpinner ? 'block' : 'none'"></mat-spinner>
+          </mat-card-content>
+          <mat-card-actions class="item-center">
+            <button mat-raised-button type="submit" color="primary">SUBMIT</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

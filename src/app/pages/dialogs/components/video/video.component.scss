@@ -1,0 +1,252 @@
+// .body {
+//   background-color: #E2C2B3;
+// }
+.video-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cross-btn {
+  top: 10px;
+  right: 5px;
+  position: absolute;
+}
+
+.mat-grid-list {
+  margin-bottom: 20px;
+}
+// .mat-grid-tile {
+// }
+::ng-deep .mat-grid-tile-content {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.mat-card {
+  width: 90%;
+  background-color: #c3c3c3;
+  padding-bottom: 25px;
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.video-bg {
+  background-color: #000;
+}
+.video {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+.text-box{
+  border: 1px solid #a4a4a4;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #f1f1f1;
+  height: fit-content;
+  .mb {
+    margin-bottom: 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    word-break: break-word;
+  }
+}
+
+.timeline-box {
+  padding-top: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0;
+}
+
+.table {
+  th {
+    font-size: 14px;
+    background-color: #BCC8DA;
+    padding: 10px;
+    vertical-align :middle;
+  }
+}
+
+::ng-deep  mat-paginator .mat-mdc-paginator-container {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  padding: 0 8px;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
+
+::ng-deep .cdk-overlay-container {
+  z-index: 1060;
+}
+
+
+.videoWid {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Add any necessary styles for your progress bar */
+.progress-bar {
+  position: relative;
+  height: 20px; /* Adjust this height as needed */
+  background-color: #ddd; /* Adjust the background color as needed */
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #007bff; /* Adjust the progress bar color as needed */
+}
+
+/* Styles for the marker buttons */
+.marker {
+  position: absolute;
+  // bottom: 0;
+  // transform: translateX(-50%);
+  border: none;
+  color: #000; /* Adjust the text color as needed */
+  cursor: pointer;
+
+  bottom: -20px;
+  height: 50px;
+  background: transparent;
+  padding: 0;
+}
+
+.timeline-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.timeline {
+  position: relative;
+  height: 15px;
+  margin-top: 10px;
+  border-bottom: 1px solid #bbb;
+  // overflow-x: auto;
+  // white-space: nowrap; 
+}
+
+.timeline::before {
+  background-color: #FFF;
+}
+
+.timeline-progress {
+  height: 100%;
+  width: 0;
+  background-color: #51acb6;
+  align-items: center;
+}
+
+.timestamp-markers {
+  position: absolute;
+  bottom: -16px;
+  width: 100%;
+  // position: relative;
+}
+
+.timestamp-marker {
+  position: absolute;
+  font-size: 10px;
+  color: #565656;
+  white-space: nowrap;
+  padding-left: 2px;
+  border-left: 1px solid #9a9a9a;
+}
+
+.scale-line {
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background-color: #9a9a9a;
+}
+
+.marker-button {
+  display: block;
+  margin-top: 4px;
+  padding: 2px 6px;
+  font-size: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.table-container {
+  height: 400px;
+  overflow: auto;
+  border-radius: 5px;
+  // border: 1px solid red;
+}
+
+table {
+  width: 100%;
+}
+
+// .timestamp {
+//   position: absolute;
+//   bottom: -20px;
+//   transform: translateX(-50%);
+//   font-size: 12px;
+//   color: #000;
+
+// }
+
+// .timestamp-outside {
+//   text-align: center;
+//   margin-top: 10px;
+//   font-size: 14px;
+//   color: #000;
+// }
+
+// .timeline {
+//   position: relative;
+//   height: 30px;
+//   background-color: #f0f0f0;
+//   margin-top: 10px;
+// }
+
+// .timestamp-marker {
+//   position: absolute;
+//   bottom: -20px;
+//   font-size: 12px;
+//   color: #000;
+//   transform: translateX(-50%);
+// }
+
+// .timeline {
+//   position: relative;
+//   height: 30px;
+//   background-color: #f0f0f0; /* Background color of the timeline bar */
+//   margin-top: 10px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 0 10px;
+// }
+
+// .timestamp-marker {
+//   font-size: 12px;
+//   color: #000;
+//   transform: translateX(-50%);
+// }
