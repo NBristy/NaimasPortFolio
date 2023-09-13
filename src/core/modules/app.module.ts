@@ -19,6 +19,9 @@ import { VideoComponent } from 'src/app/pages/dialogs/components/video/video.com
 import { VideoService } from 'src/app/pages/dialogs/components/video/video.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { LineChartComponent } from 'src/app/pages/dialogs/components/line-chart/line-chart.component';
+import { DialogsService } from 'src/app/pages/dialogs/dialogs.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     TopComponent,
     RegisterComponent,
     DialogsComponent,
-    VideoComponent
+    VideoComponent,
+    LineChartComponent
   ],
   imports: [
     FormsModule,
@@ -40,11 +44,13 @@ import { NgApexchartsModule } from "ng-apexcharts";
     HttpClientModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    FlexLayoutModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [
-    VideoService
+    VideoService,
+    DialogsService
   ],
   bootstrap: [AppComponent]
 })

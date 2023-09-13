@@ -1,3 +1,19 @@
+.video-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
 .chart-box{
   margin-left: auto;
   margin-right: auto;

@@ -26,8 +26,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatGridListModule } from '@angular/material/grid-list';
-
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
 /**
  * NgModule that includes all Material modules that are required to serve the demo-app.
@@ -60,7 +61,9 @@ const modules = [
   MatSliderModule,
   MatAutocompleteModule,
   ReactiveFormsModule,
-  MatGridListModule
+  MatGridListModule,
+  MatDividerModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

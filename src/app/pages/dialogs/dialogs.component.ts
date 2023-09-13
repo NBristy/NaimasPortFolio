@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { VideoComponent } from './components/video/video.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogsService } from './dialogs.service';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
 
 @Component({
   selector: 'app-dialogs',
@@ -22,6 +23,7 @@ export class DialogsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.fetchCsvData()
   }
 
   public render() {}
@@ -41,9 +43,25 @@ export class DialogsComponent implements OnInit {
     });
   }
 
+  public openChartDialog() {
+    const dialogRef = this.dialog.open(LineChartComponent, {
+      width: '70%',
+      disableClose: true,
+      data: {
+        csvData: this.scope.csvData
+      },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result && result.status == 'SUCCESS') {
+        this.render();
+      }
+    });
+  }
+
   public fetchCsvData() {
     this.service.getCsvData().subscribe((res:any) => {
       this.scope.csvData = res;
+      console.log(res)
     });
   }
 

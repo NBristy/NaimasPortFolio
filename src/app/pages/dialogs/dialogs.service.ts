@@ -15,7 +15,7 @@ export class DialogsService extends AbstractService {
     super();
   }
   public getCsvData(): Observable<any[]> {
-    return this.httpClient.get('/assets/temp.csv', { responseType: 'text' }).pipe(
+    return this.httpClient.get('/assets/csvs/temp.csv', { responseType: 'text' }).pipe(
       map((csvData: string) => this.parseCsvData(csvData))
     );
   }
