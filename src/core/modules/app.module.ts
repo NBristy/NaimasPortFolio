@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { LineChartComponent } from 'src/app/pages/dialogs/components/line-chart/line-chart.component';
 import { DialogsService } from 'src/app/pages/dialogs/dialogs.service';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,
     AngularMaterialModule,
     NgApexchartsModule,
-    FlexLayoutModule
+    // FlexLayoutModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [
