@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +7,16 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public loginForm: FormGroup;
+  public loginForm: UntypedFormGroup;
   public scope = {
     showSpinner: false
   }
 
   constructor() {
     let PASSWORD_REGEXP = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)(?=.*?[!-\/:-@[-`{-~])[!-~]{8,30}$/i
-    this.loginForm = new FormGroup({
-      email: new FormControl(null, [ Validators.required, Validators.email ]),
-      password: new FormControl(null, [ Validators.required, Validators.pattern(PASSWORD_REGEXP)])
+    this.loginForm = new UntypedFormGroup({
+      email: new UntypedFormControl(null, [ Validators.required, Validators.email ]),
+      password: new UntypedFormControl(null, [ Validators.required, Validators.pattern(PASSWORD_REGEXP)])
     })
   }
 

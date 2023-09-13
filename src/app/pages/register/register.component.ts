@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,18 +7,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  public registerForm: FormGroup;
+  public registerForm: UntypedFormGroup;
   public scope = {
     showSpinner: false
   }
 
   constructor() { 
     let PASSWORD_REGEXP = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)(?=.*?[!-\/:-@[-`{-~])[!-~]{8,30}$/i
-    this.registerForm = new FormGroup({
-      name : new FormControl(null, Validators.required),
-      email: new FormControl(null, [ Validators.required, Validators.email ]),
-      password: new FormControl(null, [ Validators.required, Validators.pattern(PASSWORD_REGEXP)]),
-      confirmPassword: new FormControl(null, [ Validators.required, Validators.pattern(PASSWORD_REGEXP)])
+    this.registerForm = new UntypedFormGroup({
+      name : new UntypedFormControl(null, Validators.required),
+      email: new UntypedFormControl(null, [ Validators.required, Validators.email ]),
+      password: new UntypedFormControl(null, [ Validators.required, Validators.pattern(PASSWORD_REGEXP)]),
+      confirmPassword: new UntypedFormControl(null, [ Validators.required, Validators.pattern(PASSWORD_REGEXP)])
     })
   }
 
