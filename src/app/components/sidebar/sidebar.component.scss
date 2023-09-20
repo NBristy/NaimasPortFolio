@@ -1,27 +1,14 @@
-.main-sidebar {
-  overflow: auto;
-  z-index: 500;
-  a {
-    cursor: pointer;
-  }
-  .nav-sidebar  {
-  }
+.app-drawer-container {
+  display: flex;
+  background-color: #f7ecec;
 }
-#sidebar-overlay {
-  z-index: 499;
 
+.app-drawer {
+  width: 250px;
 }
-.logo-img {
-  margin-top: 8px;
-}
-.brand-text {
-  font-size: 80%;
-  .small {
-    font-size: 60%;
-  }
-}
-@media screen and (max-width:480px) {
-  .elevation-4 {
-    box-shadow: none;
-  }
+
+.sidebar-content {
+  padding: 16px;
+  height: 100%;
+  background-color: #CA4E79;
 }

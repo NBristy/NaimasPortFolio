@@ -16,6 +16,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -62,6 +63,7 @@ const modules = [
   ReactiveFormsModule,
   MatGridListModule,
   MatDividerModule,
+  MatSidenavModule,
   MatProgressSpinnerModule
 ];
 

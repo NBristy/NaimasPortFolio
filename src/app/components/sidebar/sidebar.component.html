@@ -1,23 +1,16 @@
-<aside #mainSidebar class="main-sidebar sidebar-dark-primary elevation-4">
-  <a [routerLink]="['/']" class="brand-link">
-    <img
-      src="/assets/images/logo.png"
-      class="logo-img brand-image img-circle elevation-3"
-      style="opacity: 0.8; height: 60px;"
-    />
-    <div class="brand-text font-weight-light">
-      <div>
-        GAUDi EYE<br />
-        <span class="small">GAUSS Foundation Platform</span>
-      </div>
-    </div>
-  </a>
-  <div class="sidebar">
-    <nav class="mt-2">
-      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <gs-sidebar-menu-item *ngFor="let item of scope.menuItems" [menuItem]="item">
-        </gs-sidebar-menu-item>
+<mat-drawer-container class="app-drawer-container">
+  <mat-drawer [mode]="'side'" [opened]="isOpen" class="app-drawer">
+    <div class="sidebar-content">
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
       </ul>
-    </nav>
-  </div>
-</aside>
+      
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>

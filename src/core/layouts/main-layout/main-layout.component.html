@@ -1,12 +1,10 @@
 <div class="wrapper">
-  <app-header (toggleMenuSidebar)="toggleMenuSidebar()"></app-header>
-  <app-sidebar (mainSidebarHeight)="mainSidebarHeight($event)"></app-sidebar>
-
-  <div #contentWrapper class="content-wrapper">
-    <router-outlet></router-outlet>
-  </div>
+  <app-header (toggleSidebar)="sidebar.toggleSidebar()"></app-header>
+  <app-sidebar #sidebar>
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </app-sidebar>
 
   <app-footer></app-footer>
-  <aside class="control-sidebar control-sidebar-dark"></aside>
-  <div id="sidebar-overlay" (click)="toggleMenuSidebar()"></div>
 </div>
