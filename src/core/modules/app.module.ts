@@ -36,7 +36,7 @@ import { GalleryComponent } from '../../app/pages/gallery/gallery.component';
     DialogsComponent,
     VideoComponent,
     LineChartComponent,
-    GalleryComponent
+    GalleryComponent,
   ],
   imports: [
     FormsModule,

@@ -1,1 +1,26 @@
-<p>gallery works!</p>
+<div class="container">
+  <div class="header">
+    <h1>{{pageTitle}}</h1>
+    <div>
+      <button mat-raised-button color="accent" (click)="uploadImage()">Upload Image</button>
+    </div>
+  </div>
+  <!-- <div class="portrait-row">
+    <div class="image-container" *ngFor="let image of portraitImages">
+      <img [src]="image.src" [width]="image.width" [height]="image.height" alt="Image">
+    </div>
+  </div> -->
+  <div class="body">
+    <div class="portrait-row">
+      <div class="image-container" *ngFor="let image of portraitImages">
+        <img [src]="image.src" alt="Image" class="portrait-img">
+      </div>
+    </div>
+    
+    <div class="landscape-row">
+      <div class="image-container" *ngFor="let image of landscapeImages">
+        <img [src]="image.src" alt="Image" class="landscape-img">
+      </div>
+    </div>
+  </div>
+</div>
