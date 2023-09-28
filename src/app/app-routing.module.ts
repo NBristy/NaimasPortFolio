@@ -6,6 +6,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { TopComponent } from './pages/top/top.component';
 import { DialogsComponent } from './pages/dialogs/dialogs.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { LandingPageComponent } from './pages/templates/container/landing-page/landing-page.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'dialogs', component: DialogsComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'lp', component: LandingPageComponent },
 ];
 
 @NgModule({
