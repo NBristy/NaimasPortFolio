@@ -1,0 +1,19 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4" *ngFor="let menu of menuItems">
+        <div class="p-4">
+          <div class="menu-item-title" [ngStyle]="{ 'background-color': menu.color }">
+            <p>{{ menu.title }}</p>
+          </div>
+          <div class="menu-item-list">
+            <div class="menu-item" *ngFor="let item of menu.options; let i=index">
+              <app-custom-button [buttonText]="item.item" [menuItemId]="i"></app-custom-button>
+              <p>{{ item.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

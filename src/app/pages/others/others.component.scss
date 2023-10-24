@@ -1,0 +1,60 @@
+
+.button-list {
+  border: 1px solid #51acb6;
+  margin-top: -10px;
+}
+.menu-item-title {
+  border: 2px solid #015d8f;
+  border-radius: 10px;
+  height: 60px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+}
+
+.menu-item-list {
+  border: 2px solid #015d8f;
+  border-radius: 25px;
+  margin-top: -30px;
+  min-height: 60vh;
+  padding-top: 7vh;
+  padding-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-image-box {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  img {
+    width: 100%;
+  }
+}
+.double-image-box {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  img {
+    width: 45%;
+  }
+}

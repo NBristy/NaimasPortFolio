@@ -4,6 +4,7 @@ import { VideoComponent } from './components/video/video.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogsService } from './dialogs.service';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dialogs',
@@ -18,7 +19,8 @@ export class DialogsComponent implements OnInit {
 
   constructor(
     private dialog: MatDialog,
-    private service: DialogsService
+    private service: DialogsService,
+    private router: Router
   ) {
   }
 
@@ -63,6 +65,10 @@ export class DialogsComponent implements OnInit {
       this.scope.csvData = res;
       console.log(res)
     });
+  }
+
+  public openOthers() {
+    this.router.navigateByUrl('others')
   }
 
 }

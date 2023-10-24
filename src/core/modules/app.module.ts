@@ -31,6 +31,8 @@ import { LpAboutComponent } from '../../app/pages/templates/container/landing-pa
 import { LpCardComponent } from '../../app/pages/templates/container/landing-page/components/lp-card/lp-card.component';
 import { LpBlogComponent } from '../../app/pages/templates/container/landing-page/components/lp-blog/lp-blog.component';
 import { LpCommentsComponent } from '../../app/pages/templates/container/landing-page/components/lp-comments/lp-comments.component';
+import { OthersComponent } from '../../app/pages/others/others.component';
+import { CustomButtonComponent } from '../../app/pages/others/components/custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { LpCommentsComponent } from '../../app/pages/templates/container/landing
     LpCardComponent,
     LpBlogComponent,
     LpCommentsComponent,
+    OthersComponent,
+    CustomButtonComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,119 @@
+.bordered-button-outline {
+  width: 100%;
+  height: 90px;
+  position: relative;
+  cursor: pointer;
+  background-color: #ececec;
+  margin-bottom: 15px;
+  border: 2px solid #015d8f;
+}
+
+.bordered-button {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  background-color: #ececec;
+  border: 2px solid #015d8f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tri {
+  width: 0;
+  height: 0;
+  position: relative;
+  border-bottom: 86px solid rgb(109, 109, 109);
+  border-left: 332px solid transparent;
+}
+
+.bordered-button-outline:hover {
+  background-color: #ccc
+}
+
+.bordered-button-outline:active {
+  background-color: #dfdcdc;
+}
+
+.button-outline {
+  border: 1.5px solid #015d8f;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #ececec, #9d9c9c);
+  margin-bottom: 5px;
+}
+.button-outline:hover {
+  background: linear-gradient(to bottom right, #ececec, #777777);
+}
+.button-outline:active {
+  background: linear-gradient(to bottom right, #c3c3c3, #777777);
+}
+.line1 {
+  width: 20px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  border-top: 2px solid #015d8f;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  box-sizing: border-box;
+}
+.line2 {
+  width: 20px;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  border-top: 2px solid #015d8f;
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+  box-sizing: border-box;
+}
+.line3 {
+  width: 20px;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  border-top: 2px solid #015d8f;
+  position: absolute;
+  bottom: -2px;
+  right: -1px;
+  box-sizing: border-box;
+}
+.line4 {
+  width: 20px;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  border-top: 2px solid #015d8f;
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  box-sizing: border-box;
+}
+
+.button-inside {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  background-color: #ececec;
+  border: 2px solid #015d8f;
+  padding: 20px 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.button-inside:hover {
+  background-color: #c4c4c4;
+  
+}
+
+.button-inside:active {
+  background-color: #a3a3a3;
+}
